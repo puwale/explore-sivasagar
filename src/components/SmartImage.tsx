@@ -16,7 +16,12 @@ export const SmartImage: React.FC<SmartImageProps> = ({
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  if (hasError || !src) {
+  const resolvedSrc =
+    src && src.startsWith('/') && !src.startsWith(import.meta.env.BASE_URL)
+      ? `${import.meta.env.BASE_URL}${src.slice(1)}`
+      : src;
+
+  if (hasError || !resolvedSrc) {
     return (
       <div
         className={`w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-forest-950 via-forest-900 to-forest-950 text-ivory-100 ${className}`}
@@ -53,7 +58,7 @@ export const SmartImage: React.FC<SmartImageProps> = ({
         <div className="absolute inset-0 bg-forest-900/60 animate-pulse" />
       )}
       <img
-        src={src}
+        src={resolvedSrc}
         alt={alt}
         loading="lazy"
         onLoad={() => setIsLoaded(true)}

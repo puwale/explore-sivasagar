@@ -55,9 +55,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Rupahi Pathar, Joysagar, Sivasagar',
     distanceFromTown: '3 km south of Sivasagar town center',
     coordinates: [26.9686, 94.6231],
-    heroImage: '/images/destinations/rang-ghar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
     gallery: [
-      '/images/destinations/rang-ghar.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Rang_Ghar_2.jpg/1280px-Rang_Ghar_2.jpg'
     ],
     shortDescription: 'A two-storied royal pavilion built by King Pramatta Singha where Ahom royalty watched buffalo fights, indigenous sports, and Rongali Bihu performances.',
@@ -115,9 +115,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Rangpur, Joysagar, Sivasagar',
     distanceFromTown: '4 km south-west of Sivasagar town',
     coordinates: [26.9631, 94.6264],
-    heroImage: '/images/destinations/talatal-ghar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
     gallery: [
-      '/images/destinations/talatal-ghar.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/A_walkway_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg/1280px-A_walkway_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg'
     ],
     shortDescription: 'The grandest military stronghold of the Ahom Kingdom featuring seven storeys—four above ground and three subterranean—with legendary secret escape tunnels.',
@@ -173,9 +173,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Garhgaon, Nazira subdivision, Sivasagar District',
     distanceFromTown: '15 km east of Sivasagar town',
     coordinates: [26.9292, 94.7562],
-    heroImage: '/images/destinations/kareng-ghar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
     gallery: [
-      '/images/destinations/kareng-ghar.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kareng_Ghar%2C_Sivasagar%2C_Assam.jpg/1280px-Kareng_Ghar%2C_Sivasagar%2C_Assam.jpg'
     ],
     shortDescription: 'The regal principal palace of the Ahom monarchs at their long-time capital Garhgaon, displaying step-pyramidal architecture surrounded by ancient moats.',
@@ -231,9 +231,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Center of Sivasagar Town, banks of Borpukhuri',
     distanceFromTown: 'Located in the heart of Sivasagar town',
     coordinates: [26.9856, 94.6375],
-    heroImage: '/images/destinations/sivadol.JPG',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
     gallery: [
-      '/images/destinations/sivadol.JPG',
+      import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sivadol_Sivasagar.JPG/1280px-Sivadol_Sivasagar.JPG'
     ],
     shortDescription: 'Standing 104 feet tall on the embankment of the massive 129-acre Borpukhuri, Sivadol is capped by an authentic 8-foot pure gold dome (Kalasha) surviving through centuries.',
@@ -289,9 +289,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Joysagar, 5 km south of Sivasagar town',
     distanceFromTown: '5 km south of town center',
     coordinates: [26.9534, 94.6346],
-    heroImage: '/images/destinations/joysagar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
     gallery: [
-      '/images/destinations/joysagar.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Joysagar_Joydol_Relic.jpg/1280px-Joysagar_Joydol_Relic.jpg'
     ],
     shortDescription: 'Spanning 318 acres, Joysagar is the largest human-excavated historical lake in Asia, constructed in memory of Queen Mother Joymoti Konwari.',
@@ -346,9 +346,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Charaideo Hillock, ~30 km east of Sivasagar',
     distanceFromTown: '28 km east of Sivasagar town',
     coordinates: [26.9450, 94.9080],
-    heroImage: '/images/destinations/charaideo.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
     gallery: [
-      '/images/destinations/charaideo.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Maidams_%28N-AS-24%29.jpg/1280px-Maidams_%28N-AS-24%29.jpg'
     ],
     shortDescription: 'Inscribed as India’s 43rd UNESCO World Heritage Site in 2024, Charaideo contains over 90 sacred royal burial tumuli of Ahom monarchs and queens, often termed the Pyramids of Assam.',
@@ -404,9 +404,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'West bank of Borpukhuri, Sivasagar Town',
     distanceFromTown: 'Within town center walking zone',
     coordinates: [26.9839, 94.6328],
-    heroImage: '/images/destinations/tai-museum.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg',
     gallery: [
-      '/images/destinations/tai-museum.jpg'
+      import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg'
     ],
     shortDescription: 'A treasure-house of Tai-Ahom history housing rare Sanchi-bark Buranji chronicles, royal swords (Hengdang), ancient coins, bronze idols, and traditional textiles.',
     historicalBackground: [
@@ -458,9 +458,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Over the Namdang River, NH-715, near Sivasagar',
     distanceFromTown: '8 km west of Sivasagar town',
     coordinates: [26.9587, 94.5772],
-    heroImage: '/images/destinations/namdang.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/namdang.jpg',
     gallery: [
-      '/images/destinations/namdang.jpg'
+      import.meta.env.BASE_URL + 'images/destinations/namdang.jpg'
     ],
     shortDescription: 'Carved out of a single monolithic sandstone slab in 1703 CE, this 60-meter long humped stone bridge still bears modern heavy vehicular traffic on National Highway 715.',
     historicalBackground: [
@@ -513,9 +513,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Confluence of Brahmaputra & Disang rivers, northern Sivasagar',
     distanceFromTown: '22 km north-west of Sivasagar',
     coordinates: [27.1120, 94.5680],
-    heroImage: '/images/destinations/panidehing.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/panidehing.jpg',
     gallery: [
-      '/images/destinations/panidehing.jpg'
+      import.meta.env.BASE_URL + 'images/destinations/panidehing.jpg'
     ],
     shortDescription: 'A 33.93 sq km wetland sanctuary on the floodplains of the Brahmaputra, providing a serene winter paradise for over 165 species of migratory water birds and endangered storks.',
     historicalBackground: [
@@ -568,9 +568,9 @@ export const DESTINATIONS: Destination[] = [
     location: 'Gaurisagar, NH-715, 12 km west of Sivasagar',
     distanceFromTown: '12 km west of Sivasagar town',
     coordinates: [26.9242, 94.5422],
-    heroImage: '/images/destinations/gaurisagar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg',
     gallery: [
-      '/images/destinations/gaurisagar.jpg'
+      import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg'
     ],
     shortDescription: 'A sprawling 150-acre water reservoir flanked by three soaring 18th-century stone and brick temples dedicated to Lord Shiva, Vishnu, and Devi Durga.',
     historicalBackground: [
@@ -629,7 +629,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Chaolung Sukaphaa (The Architect of Assam)',
     description: 'Crossing the rugged Patkai mountain ranges from Mong Mao (present-day Yunnan/Upper Myanmar), Prince Sukaphaa arrived in the fertile Brahmaputra Valley and founded the Ahom dynasty at Charaideo, establishing a 600-year united kingdom based on assimilation and respect for local tribes.',
     significance: 'Unification of diverse indigenous peoples under a unified Assamese civilizational ethos.',
-    image: '/images/destinations/charaideo.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg'
   },
   {
     year: '1540 CE',
@@ -637,7 +637,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Swargadeo Suklengmung (Gargayan Raja)',
     description: 'The capital was moved from Charaideo to Garhgaon along the Dikhow River. The king constructed massive protective ramparts (*Garh*), excavated royal canals, and issued the very first circular Ahom silver coinage.',
     significance: 'Transformed Garhgaon into an impenetrable imperial metropolis and diplomatic capital.',
-    image: '/images/destinations/kareng-ghar.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg'
   },
   {
     year: '1671 CE',
@@ -645,7 +645,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Swargadeo Udayaditya Singha & General Lachit Borphukan',
     description: 'In one of the most famous naval battles in military history on the waters of the Brahmaputra, General Lachit Borphukan routed the numerically superior Mughal forces led by Ram Singh, famously declaring: "My uncle is not greater than my country."',
     significance: 'Decisively halted Mughal imperial expansion into Northeast India forever.',
-    image: '/images/destinations/talatal-ghar.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg'
   },
   {
     year: '1696–1714 CE',
@@ -653,7 +653,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Swargadeo Rudra Singha (Sukhrungphaa)',
     description: 'Under Rudra Singha, Ahom power, art, and architecture reached their zenith. He shifted the capital to Rangpur, excavated the colossal Joysagar Tank in memory of his mother Joymoti, built the Namdang Stone Bridge, and patronized music, dance, and literature.',
     significance: 'Golden age of architectural renaissance, trade alliances, and civic engineering.',
-    image: '/images/destinations/joysagar.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg'
   },
   {
     year: '1744–1750 CE',
@@ -661,7 +661,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Swargadeo Pramatta Singha',
     description: 'Constructed Asia’s oldest surviving two-storey amphitheatre at Rupahi Pathar, providing a permanent royal stage for traditional bull fights, Bihu folk dance, and martial sports.',
     significance: 'Institutionalized Rongali Bihu as the premier national festival of Assam.',
-    image: '/images/destinations/rang-ghar.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg'
   },
   {
     year: '2024 CE',
@@ -669,7 +669,7 @@ export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
     swargadeo: 'Enduring Legacy of 40+ Ahom Swargadeos',
     description: 'The royal mound-burial system of the Ahom dynasty at Charaideo was officially inscribed into the UNESCO World Heritage List in July 2024, honoring 600 years of unique burial architecture and royal traditions.',
     significance: 'Global recognition of Assam’s historic identity on the world stage.',
-    image: '/images/destinations/charaideo.jpg'
+    image: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg'
   }
 ];
 
@@ -689,7 +689,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Royal Ahom Heritage Trail',
     subtitle: 'Palaces, Forts & Secret Tunnels',
     icon: 'Landmark',
-    image: '/images/destinations/talatal-ghar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
     description: 'Trace the 600-year path of kings. Walk the vaulted corridors of Talatal Ghar, stand where royal spectators cheered at Rang Ghar, and climb the steps of the step-palace Kareng Ghar.',
     highlights: [
       'Guided walk through Talatal Ghar’s military arcades',
@@ -703,7 +703,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Authentic Assamese Gastronomy',
     subtitle: 'Khar, Duck Roast, Pitha & Organic Flavors',
     icon: 'UtensilsCrossed',
-    image: '/images/destinations/joysagar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
     description: 'Savor genuine Upper Assamese cuisine prepared with zero artificial spices, fragrant Joha rice, fresh river fish, and slow-cooked duck with ash gourd (*Kumura*).',
     highlights: [
       'Omita Khar (traditional alkaline raw papaya dish)',
@@ -718,7 +718,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Golden Muga Silk & Handloom Weaving',
     subtitle: 'Assam’s Royal Golden Fabric',
     icon: 'Sparkles',
-    image: '/images/destinations/tai-museum.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg',
     description: 'Witness the world-famous natural golden Muga silk, endemic exclusively to Assam. Visit local weavers producing exquisite Mekhela Sador adorned with traditional Kingkhap motifs.',
     highlights: [
       'Muga silk cocoons harvested from Som and Soalu trees',
@@ -732,7 +732,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Wetland Safari & Avian Photography',
     subtitle: 'Panidehing Sanctuary & River Confluences',
     icon: 'Compass',
-    image: '/images/destinations/panidehing.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/panidehing.jpg',
     description: 'Drift along serene country boats in Panidehing’s lotus swamps to spot over 165 species of migratory geese, pelicans, and endangered storks against the morning mist.',
     highlights: [
       'Bar-headed Geese flying against the distant Patkai hills',
@@ -746,7 +746,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Rongali Bihu & Me-Dam-Me-Phi',
     subtitle: 'Rhythms of Dhol, Pepa & Ancestral Homage',
     icon: 'Music',
-    image: '/images/destinations/rang-ghar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
     description: 'Feel the electrifying resonance of the buffalo-horn Pepa and wild Dhol drums during Bohag Bihu at the historic Rupahi Pathar, or join the solemn prayers of Me-Dam-Me-Phi at Charaideo.',
     highlights: [
       'Traditional Bihu Husori troupes dancing in Muga silk attire',
@@ -868,7 +868,7 @@ export const GALLERY_ITEMS = [
     title: 'Rang Ghar Royal Amphitheatre',
     location: 'Joysagar, Sivasagar',
     category: 'Monuments',
-    image: '/images/destinations/rang-ghar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
     caption: 'Asia’s oldest royal sports amphitheatre with its iconic boat-shaped roof built by King Pramatta Singha.'
   },
   {
@@ -876,7 +876,7 @@ export const GALLERY_ITEMS = [
     title: 'Majestic Sivadol Shikhara & Kalasha',
     location: 'Borpukhuri, Sivasagar',
     category: 'Temples',
-    image: '/images/destinations/sivadol.JPG',
+    image: import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
     caption: 'The 104-foot tall Shiva temple crowned by an authentic 8-foot pure gold dome (Kalasha).'
   },
   {
@@ -884,7 +884,7 @@ export const GALLERY_ITEMS = [
     title: 'Talatal Ghar Military Fort & Citadel',
     location: 'Rangpur, Sivasagar',
     category: 'Architecture',
-    image: '/images/destinations/talatal-ghar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
     caption: 'Vaulted brick passageways and defensive barracks of the Ahom imperial citadel.'
   },
   {
@@ -892,7 +892,7 @@ export const GALLERY_ITEMS = [
     title: 'Serene Waters of Joysagar & Joydol',
     location: 'Joysagar',
     category: 'Lakes',
-    image: '/images/destinations/joysagar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
     caption: 'Asia’s largest historical excavated tank spanning 318 acres of tranquil water.'
   },
   {
@@ -900,7 +900,7 @@ export const GALLERY_ITEMS = [
     title: 'Charaideo Royal Maidams (UNESCO 2024)',
     location: 'Charaideo Hillock',
     category: 'UNESCO Heritage',
-    image: '/images/destinations/charaideo.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
     caption: 'The sacred royal pyramids of Ahom Swargadeos, inscribed by UNESCO in July 2024.'
   },
   {
@@ -908,7 +908,7 @@ export const GALLERY_ITEMS = [
     title: 'Kareng Ghar (Garhgaon Palace)',
     location: 'Garhgaon, Nazira',
     category: 'Architecture',
-    image: '/images/destinations/kareng-ghar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
     caption: 'The seven-storeyed step-pyramidal palace and royal coronation seat of the Ahom monarchs.'
   },
   {
@@ -916,7 +916,7 @@ export const GALLERY_ITEMS = [
     title: 'Namdang 1703 Monolithic Stone Bridge',
     location: 'Over Namdang River, NH-715',
     category: 'Monuments',
-    image: '/images/destinations/namdang.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/namdang.jpg',
     caption: 'Carved out of a single gigantic sandstone slab in 1703 CE, still bearing vehicular highway traffic today.'
   },
   {
@@ -924,7 +924,7 @@ export const GALLERY_ITEMS = [
     title: 'Migratory Waterfowl of Panidehing',
     location: 'Panidehing Sanctuary',
     category: 'Nature',
-    image: '/images/destinations/panidehing.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/panidehing.jpg',
     caption: 'Wintering waterfowl congregate over pristine wetland marshes along the Brahmaputra floodplains.'
   },
   {
@@ -932,7 +932,7 @@ export const GALLERY_ITEMS = [
     title: 'Gaurisagar Devidol & Sacred Lake',
     location: 'Gaurisagar, Sivasagar',
     category: 'Lakes',
-    image: '/images/destinations/gaurisagar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg',
     caption: 'The 150-acre reservoir and temple triad commissioned by Queen Phuleswari in 1723 CE.'
   }
 ];
