@@ -10,7 +10,6 @@ import {
   type MotionValue,
 } from "framer-motion";
 import {
-  BookOpen,
   Compass,
   Home,
   Images,
