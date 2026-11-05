@@ -40,7 +40,7 @@ export const TripPlannerDrawer: React.FC<TripPlannerDrawerProps> = ({
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.3, ease: [0.2, 0.8, 0.2, 1] }}
               className="w-screen max-w-md bg-ivory-50 border-l border-gold-500/30 shadow-2xl flex flex-col"
             >
               {/* Header */}
@@ -48,88 +48,89 @@ export const TripPlannerDrawer: React.FC<TripPlannerDrawerProps> = ({
                 <div>
                   <div className="flex items-center gap-2">
                     <Compass className="w-5 h-5 text-gold-400" />
-                    <h2 className="font-serif text-xl font-semibold">Saved Sivasagar Itinerary</h2>
+                    <h2 className="font-serif text-2xl font-normal">Saved Heritage Study List</h2>
                   </div>
-                  <p className="text-xs text-ivory-300/80 mt-1">
-                    {totalDestinations} {totalDestinations === 1 ? 'place' : 'places'} bookmarked
+                  <p className="text-[13px] text-charcoal-400 mt-1">
+                    {totalDestinations} {totalDestinations === 1 ? 'monument' : 'monuments'}{' '}
+                    bookmarked for study &amp; route planning
                   </p>
                 </div>
 
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-full bg-forest-900 text-ivory-300 hover:text-white transition-colors"
-                  aria-label="Close itinerary"
+                  className="m-btn p-2 rounded-full bg-forest-900 text-ivory-200 hover:text-white"
+                  aria-label="Close study list"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Body */}
-              <div className="flex-1 overflow-y-auto p-6 space-y-4">
+              <div className="flex-1 overflow-y-auto p-6">
                 {savedDestinations.length === 0 ? (
-                  <div className="text-center py-20 px-4 space-y-4">
-                    <div className="w-16 h-16 rounded-full bg-forest-800/10 text-forest-800 flex items-center justify-center mx-auto">
-                      <Compass className="w-8 h-8" />
+                  <div className="text-center py-20 px-4 space-y-3">
+                    <div className="w-14 h-14 rounded-full bg-forest-950/10 text-forest-800 flex items-center justify-center mx-auto">
+                      <Compass className="w-7 h-7" />
                     </div>
-                    <h3 className="font-serif text-xl text-forest-950 font-semibold">
-                      Your Itinerary is Empty
+                    <h3 className="font-serif text-2xl text-forest-950 font-medium">
+                      Your Study List is Empty
                     </h3>
-                    <p className="text-sm text-charcoal-500 max-w-xs mx-auto">
-                      Click the bookmark icon on any destination card to curate your personalized
-                      Sivasagar heritage route.
+                    <p className="text-[15px] text-charcoal-600 max-w-xs mx-auto leading-[1.6]">
+                      Click the bookmark icon on any historical monument card to compile your
+                      personal Sivasagar study route.
                     </p>
                   </div>
                 ) : (
-                  <>
-                    <div className="flex items-center justify-between pb-2 border-b border-charcoal-200">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-charcoal-500">
-                        Your Curated Places
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between pb-3 border-b border-charcoal-800/15 text-[13px]">
+                      <span className="font-medium text-charcoal-600">
+                        Bookmarked Historical Sites
                       </span>
                       <button
                         onClick={onClearAll}
-                        className="text-xs text-rose-600 hover:text-rose-800 font-medium transition-colors"
+                        className="text-rose-700 hover:text-rose-900 font-medium transition-colors"
                       >
                         Clear All
                       </button>
                     </div>
 
-                    <div className="space-y-3">
+                    <div className="divide-y divide-charcoal-800/15 border-b border-charcoal-800/15">
                       {savedDestinations.map((dest, index) => (
                         <div
                           key={dest.id}
-                          className="group bg-white rounded-2xl p-4 border border-charcoal-200/80 shadow-sm hover:shadow-md transition-all flex items-start gap-3 relative"
+                          className="py-4 flex items-start gap-3.5 group"
                         >
-                          <span className="w-6 h-6 rounded-full bg-forest-900 text-gold-400 text-xs font-bold font-mono flex items-center justify-center shrink-0 mt-0.5">
-                            {index + 1}
+                          <span className="text-[13px] font-medium text-forest-800 mt-1 shrink-0">
+                            0{index + 1}.
                           </span>
 
                           <div
-                            className="flex-1 cursor-pointer"
+                            className="flex-1 cursor-pointer space-y-1"
                             onClick={() => {
                               onClose();
                               onSelectDestination(dest);
                             }}
                           >
-                            <span className="text-[10px] font-semibold uppercase tracking-wider text-gold-700">
-                              {dest.category}
+                            <span className="text-[13px] font-medium text-gold-700 block">
+                              {dest.category} • {dest.yearBuilt}
                             </span>
-                            <h4 className="font-serif text-lg font-semibold text-forest-950 group-hover:text-forest-700 transition-colors">
+                            <h4 className="font-serif text-xl font-medium text-forest-950 group-hover:text-forest-800 transition-colors">
                               {dest.name}
                             </h4>
-                            <div className="flex items-center gap-1.5 text-xs text-charcoal-500 mt-1">
-                              <MapPin className="w-3 h-3 text-forest-700" />
+                            <div className="flex items-center gap-1.5 text-[13px] text-charcoal-600">
+                              <MapPin className="w-3.5 h-3.5 text-forest-800 shrink-0" />
                               <span className="truncate">{dest.location}</span>
                             </div>
-                            <div className="flex items-center gap-1.5 text-xs text-charcoal-500 mt-0.5">
-                              <Clock className="w-3 h-3 text-forest-700" />
-                              <span>Duration: {dest.visitorInfo.idealDuration}</span>
+                            <div className="flex items-center gap-1.5 text-[13px] text-charcoal-600">
+                              <Clock className="w-3.5 h-3.5 text-forest-800 shrink-0" />
+                              <span>Study Duration: {dest.visitorInfo.idealDuration}</span>
                             </div>
                           </div>
 
                           <button
                             onClick={() => onRemove(dest.id)}
-                            className="p-1.5 text-charcoal-400 hover:text-rose-600 rounded-lg hover:bg-rose-50 transition-colors"
-                            title="Remove from itinerary"
+                            className="m-btn p-1.5 text-charcoal-500 hover:text-rose-700 rounded-lg"
+                            title="Remove from study list"
                             aria-label="Remove item"
                           >
                             <Trash2 className="w-4 h-4" />
@@ -137,29 +138,29 @@ export const TripPlannerDrawer: React.FC<TripPlannerDrawerProps> = ({
                         </div>
                       ))}
                     </div>
-                  </>
+                  </div>
                 )}
               </div>
 
               {/* Footer Actions */}
               {savedDestinations.length > 0 && (
-                <div className="p-6 bg-white border-t border-charcoal-200 space-y-3">
+                <div className="p-6 bg-ivory-100 border-t border-charcoal-800/15 space-y-3">
                   <a
                     href={`https://www.google.com/maps/dir/${savedDestinations
                       .map((d) => `${d.coordinates[0]},${d.coordinates[1]}`)
                       .join('/')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3.5 rounded-2xl bg-forest-900 text-ivory-100 font-semibold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-forest-800 transition-colors shadow-sm"
+                    className="m-btn w-full h-12 rounded-full bg-forest-950 text-ivory-100 font-medium text-[14px] flex items-center justify-center gap-2 hover:bg-forest-800"
                   >
                     <Navigation className="w-4 h-4 text-gold-400" />
-                    <span>Open Multi-Stop Route in Maps</span>
+                    <span>Open Multi-Site Circuit in Google Maps</span>
                   </a>
                   <button
                     onClick={onClose}
-                    className="w-full py-2.5 rounded-2xl border border-charcoal-300 text-charcoal-700 text-xs font-semibold uppercase tracking-wider hover:bg-charcoal-50 transition-colors"
+                    className="m-btn w-full h-11 rounded-full border border-charcoal-800/20 text-charcoal-800 text-[14px] font-medium hover:bg-ivory-200/60"
                   >
-                    Continue Browsing
+                    Continue Reading Archive
                   </button>
                 </div>
               )}

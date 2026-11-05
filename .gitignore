@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Agent & local tool configs
+.agents
+.codex
+.impeccable
+.github/agents
+.github/hooks
+.github/skills
+skills-lock.json
+

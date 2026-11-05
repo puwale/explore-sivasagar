@@ -16,10 +16,10 @@ if (typeof window !== "undefined") {
 // 1. THEME-ADAPTIVE LUXURY HERITAGE STYLES
 // -------------------------------------------------------------------------
 const STYLES = `
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Instrument+Sans:wght@400;500;600&display=swap');
 
 .cinematic-footer-wrapper {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Instrument Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #071B16;
   color: #F4EFE5;
@@ -49,13 +49,8 @@ const STYLES = `
 }
 
 @keyframes footer-breathe {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.45; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.85; }
-}
-
-@keyframes footer-scroll-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.35; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.65; }
 }
 
 @keyframes footer-heartbeat {
@@ -68,30 +63,16 @@ const STYLES = `
   animation: footer-breathe 9s ease-in-out infinite alternate;
 }
 
-.animate-footer-scroll-marquee {
-  animation: footer-scroll-marquee 36s linear infinite;
-}
-
 .animate-footer-heartbeat {
   animation: footer-heartbeat 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }
 
-/* Theme-adaptive Grid Background */
-.footer-bg-grid {
-  background-size: 56px 56px;
-  background-image: 
-    linear-gradient(to right, rgba(198, 165, 107, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(198, 165, 107, 0.05) 1px, transparent 1px);
-  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
-}
-
-/* Theme-adaptive Aurora Glow with Antique Gold & Deep Emerald */
+/* Theme-adaptive Ambient Vignette with Antique Gold & Deep Emerald */
 .footer-aurora {
   background: radial-gradient(
     circle at 50% 50%, 
-    rgba(198, 165, 107, 0.16) 0%, 
-    rgba(18, 56, 45, 0.4) 40%, 
+    rgba(198, 165, 107, 0.12) 0%, 
+    rgba(18, 56, 45, 0.35) 45%, 
     transparent 75%
   );
 }
@@ -106,14 +87,14 @@ const STYLES = `
   border: 1px solid var(--pill-border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .footer-glass-pill:hover {
   background: linear-gradient(145deg, var(--pill-bg-1-hover) 0%, var(--pill-bg-2-hover) 100%);
   border-color: var(--pill-border-hover);
   box-shadow: 
-      0 15px 35px -8px var(--pill-shadow-hover), 
+      0 12px 28px -8px var(--pill-shadow-hover), 
       inset 0 1px 1px var(--pill-highlight-hover);
   color: #F4EFE5;
 }
@@ -126,19 +107,16 @@ const STYLES = `
   font-weight: 900;
   letter-spacing: 0.08em;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(198, 165, 107, 0.22);
-  background: linear-gradient(180deg, rgba(198, 165, 107, 0.18) 0%, rgba(244, 239, 229, 0.02) 55%, transparent 95%);
+  -webkit-text-stroke: 1px rgba(198, 165, 107, 0.18);
+  background: linear-gradient(180deg, rgba(198, 165, 107, 0.14) 0%, rgba(244, 239, 229, 0.02) 55%, transparent 95%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-/* Metallic Text Glow */
-.footer-text-glow {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F4EFE5 45%, #C6A56B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0px 0px 24px rgba(198, 165, 107, 0.25));
+/* Solid Editorial Heading */
+.footer-heading-solid {
+  color: #F4EFE5;
+  text-shadow: 0 2px 20px rgba(7, 27, 22, 0.6);
 }
 `;
 
@@ -223,20 +201,21 @@ export const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>
 MagneticButton.displayName = "MagneticButton";
 
 // -------------------------------------------------------------------------
-// 3. MARQUEE ITEM
+// 3. STATIC ARCHIVAL HERITAGE BANNER
 // -------------------------------------------------------------------------
-const MarqueeItem = () => (
-  <div className="flex items-center space-x-8 md:space-x-12 px-4 md:px-6 shrink-0">
-    <span className="hover:text-[#F4EFE5] transition-colors">DISCOVER SIVASAGAR</span>
-    <span className="text-[#C6A56B] text-base drop-shadow-[0_0_8px_rgba(198,165,107,0.6)]">✦</span>
-    <span className="hover:text-[#F4EFE5] transition-colors">EXPLORE ASSAM</span>
-    <span className="text-[#C6A56B] text-base drop-shadow-[0_0_8px_rgba(198,165,107,0.6)]">✦</span>
-    <span className="hover:text-[#F4EFE5] transition-colors">AHOM HERITAGE</span>
-    <span className="text-[#C6A56B] text-base drop-shadow-[0_0_8px_rgba(198,165,107,0.6)]">✦</span>
-    <span className="hover:text-[#F4EFE5] transition-colors">HISTORY &amp; CULTURE</span>
-    <span className="text-[#C6A56B] text-base drop-shadow-[0_0_8px_rgba(198,165,107,0.6)]">✦</span>
-    <span className="hover:text-[#F4EFE5] transition-colors">THE LEGACY OF ASSAM</span>
-    <span className="text-[#C6A56B] text-base drop-shadow-[0_0_8px_rgba(198,165,107,0.6)]">✦</span>
+const ArchivalBanner = () => (
+  <div className="flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-10 gap-y-2 px-4 md:px-6 text-center">
+    <span className="text-[#A9B3AA] text-xs sm:text-[13px] font-medium tracking-[0.2em] uppercase">
+      Royal Capitals of Rangpur &amp; Garhgaon
+    </span>
+    <span className="text-[#C6A56B] text-xs sm:text-sm select-none">✦</span>
+    <span className="text-[#A9B3AA] text-xs sm:text-[13px] font-medium tracking-[0.2em] uppercase">
+      Charaideo UNESCO World Heritage
+    </span>
+    <span className="text-[#C6A56B] text-xs sm:text-sm select-none hidden md:inline">✦</span>
+    <span className="text-[#A9B3AA] text-xs sm:text-[13px] font-medium tracking-[0.2em] uppercase hidden md:inline">
+      Six Centuries of Ahom Sovereignty (1228–1826 CE)
+    </span>
   </div>
 );
 
@@ -350,8 +329,10 @@ export function CinematicFooter({ onNavigate, className }: CinematicFooterProps)
     { label: "Home", targetId: "home" },
     { label: "Explore Destinations", targetId: "destinations" },
     { label: "Ahom Heritage", targetId: "heritage" },
+    { label: "Historical Discoveries", targetId: "discoveries" },
+    { label: "Interactive Map", targetId: "map" },
     { label: "Photo Gallery", targetId: "gallery" },
-    { label: "Travel Guide", targetId: "guide" },
+    { label: "Visitor Guide", targetId: "guide" },
     { label: "About Sivasagar", targetId: "experiences" },
   ];
 
@@ -366,9 +347,8 @@ export function CinematicFooter({ onNavigate, className }: CinematicFooterProps)
           className
         )}
       >
-        {/* Ambient Light & Grid Background */}
+        {/* Ambient Light Vignette */}
         <div className="footer-aurora absolute left-1/2 top-1/3 h-[65vh] w-[85vw] -translate-x-1/2 -translate-y-1/2 animate-footer-breathe rounded-[50%] blur-[90px] pointer-events-none z-0" />
-        <div className="footer-bg-grid absolute inset-0 z-0 pointer-events-none opacity-70" />
 
         {/* Giant Background Typography: SIVASAGAR */}
         <div
@@ -379,13 +359,9 @@ export function CinematicFooter({ onNavigate, className }: CinematicFooterProps)
           SIVASAGAR
         </div>
 
-        {/* 1. Diagonal Sleek Marquee (Top of footer) */}
-        <div className="relative w-full overflow-hidden border-y border-[#C6A56B]/25 bg-[#071B16]/80 backdrop-blur-md py-4 z-10 shadow-2xl mb-12 sm:mb-16">
-          <div className="flex w-max animate-footer-scroll-marquee text-xs md:text-sm font-semibold tracking-[0.28em] text-[#A9B3AA] uppercase select-none">
-            <MarqueeItem />
-            <MarqueeItem />
-            <MarqueeItem />
-          </div>
+        {/* 1. Static Archival Dedication Banner (Top of footer) */}
+        <div className="relative w-full overflow-hidden border-y border-[#C6A56B]/20 bg-[#0C2820]/60 backdrop-blur-md py-4 z-10 shadow-lg mb-12 sm:mb-16">
+          <ArchivalBanner />
         </div>
 
         {/* 2. Main Center Content */}
@@ -398,10 +374,10 @@ export function CinematicFooter({ onNavigate, className }: CinematicFooterProps)
             </span>
           </div>
 
-          {/* Luxury Serif Heading */}
+          {/* Luxury Serif Heading — Solid Warm Ivory with Architectural Depth */}
           <h2
             ref={headingRef}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight footer-text-glow leading-[1.08] mb-6"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-[-0.02em] footer-heading-solid leading-[1.08] mb-6"
           >
             Continue Exploring.
           </h2>
@@ -481,6 +457,11 @@ export function CinematicFooter({ onNavigate, className }: CinematicFooterProps)
           <h3 className="font-serif italic text-2xl sm:text-4xl md:text-5xl font-normal text-[#F4EFE5] tracking-tight mb-3 drop-shadow-md">
             &ldquo;Thank you for visiting Sivasagar.&rdquo;
           </h3>
+
+          {/* Central Editorial Motto */}
+          <p className="text-xs sm:text-sm font-serif italic text-[#F4EFE5]/85 mb-2">
+            Preserving the Past. Sharing the Legacy. Celebrating Sivasagar.
+          </p>
 
           {/* Subtitle */}
           <p className="text-[10px] sm:text-xs font-semibold tracking-[0.3em] uppercase text-[#C6A56B] font-display">

@@ -8,19 +8,19 @@ export default {
     extend: {
       colors: {
         forest: {
-          950: '#071511',
-          900: '#0F2620',
-          800: '#173B32',
-          700: '#1E4E42',
-          600: '#2A6657',
-          500: '#388371',
+          950: '#071B16',
+          900: '#0C2820',
+          800: '#12382D',
+          700: '#1B4D3E',
+          600: '#266654',
+          500: '#35826C',
         },
         ivory: {
-          50: '#FAF8F4',
-          100: '#F5F1E8',
-          200: '#EBE3D3',
-          300: '#DDD1B8',
-          400: '#CBBBA0',
+          50: '#FAF7F2',
+          100: '#F4EFE5',
+          200: '#E8E0D1',
+          300: '#D8D0C1',
+          400: '#C4B9A5',
         },
         gold: {
           300: '#E2CA9D',
@@ -31,39 +31,25 @@ export default {
         },
         charcoal: {
           950: '#0D0F0E',
-          900: '#151816',
-          800: '#202522',
-          700: '#2F3632',
-          600: '#464F4A',
-          500: '#647069',
+          900: '#181C19',
+          800: '#252A26',
+          700: '#343B36',
+          600: '#4A534D',
+          500: '#68736B',
+          400: '#A9B3AA',
         }
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        display: ['"Cinzel"', 'serif'],
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['"Instrument Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
-        'luxury': '0 20px 40px -15px rgba(15, 38, 32, 0.25)',
-        'luxury-hover': '0 30px 60px -15px rgba(15, 38, 32, 0.35)',
-        'gold-glow': '0 0 35px -5px rgba(198, 165, 107, 0.3)',
+        'luxury': '0 16px 32px -12px rgba(7, 27, 22, 0.18)',
+        'luxury-hover': '0 20px 40px -12px rgba(7, 27, 22, 0.24)',
+        'gold-glow': '0 0 24px -6px rgba(198, 165, 107, 0.25)',
       },
-      animation: {
-        'fade-in': 'fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-        'float-slow': 'floatSlow 6s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(16px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        floatSlow: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
-        }
-      }
     },
   },
   plugins: [],
 }
-
