@@ -11,6 +11,7 @@ import { TravelGuideSection } from './components/TravelGuideSection';
 import { PhotoGallery } from './components/PhotoGallery';
 import { TripPlannerDrawer } from './components/TripPlannerDrawer';
 import { CinematicFooter } from '@/components/ui/motion-footer';
+import { FloatingDock, HERITAGE_DOCK_ITEMS } from '@/components/ui/floating-dock';
 import { Bookmark } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -118,6 +119,9 @@ export function App() {
         onClearAll={handleClearAllSaved}
         onSelectDestination={(dest) => setSelectedDestination(dest)}
       />
+
+      {/* Persistent heritage navigation dock */}
+      <FloatingDock items={HERITAGE_DOCK_ITEMS} />
 
       {/* Sleek Floating Luxury Itinerary Pill (Bottom Right) */}
       <aside aria-label="Quick itinerary access" className="fixed bottom-6 right-6 z-40">
