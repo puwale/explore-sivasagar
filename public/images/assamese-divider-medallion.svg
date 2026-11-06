@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="gold" cx="35%" cy="28%" r="80%">
+      <stop offset="0" stop-color="#f4d58a"/><stop offset=".55" stop-color="#c58b35"/><stop offset="1" stop-color="#8d4c20"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#8f1e24"/>
+  <circle cx="100" cy="100" r="88" fill="url(#gold)" stroke="#f3d58d" stroke-width="4"/>
+  <circle cx="100" cy="100" r="72" fill="#9e2428" stroke="#f1d28a" stroke-width="3"/>
+  <path d="M100 24 116 73 164 55 127 94 176 111 125 119 138 169 100 133 62 169 75 119 24 111 73 94 36 55 84 73Z" fill="#e8c16c" stroke="#54251b" stroke-width="3"/>
+  <path d="M100 56 112 88 144 100 112 112 100 144 88 112 56 100 88 88Z" fill="#f6e6bd" stroke="#7e2924" stroke-width="4"/>
+  <path d="M100 76 124 100 100 124 76 100Z" fill="#b51f2a" stroke="#f6d88f" stroke-width="3"/>
+  <circle cx="100" cy="100" r="8" fill="#e9c36f"/>
+  <g fill="#f6dfaa">
+    <circle cx="100" cy="15" r="3"/><circle cx="100" cy="185" r="3"/>
+    <circle cx="15" cy="100" r="3"/><circle cx="185" cy="100" r="3"/>
+    <circle cx="40" cy="40" r="3"/><circle cx="160" cy="40" r="3"/>
+    <circle cx="40" cy="160" r="3"/><circle cx="160" cy="160" r="3"/>
+  </g>
+</svg>

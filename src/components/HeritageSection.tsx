@@ -202,7 +202,7 @@ export const HeritageSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 10 Defining Epochs Chronological Ledger */}
+        {/* 11 Defining Epochs Chronological Ledger */}
         <div className="space-y-8 pt-8 border-t border-gold-500/20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
             <div className="lg:col-span-7 space-y-1.5">
@@ -210,35 +210,35 @@ export const HeritageSection: React.FC = () => {
                 Chronological Ledger of the Swargadeos
               </span>
               <h3 className="font-serif text-2xl sm:text-4xl font-normal text-ivory-100 tracking-[-0.015em]">
-                10 Defining Epochs: 1228 CE to 2024 CE
+                11 Defining Epochs: 1228 CE to 2024 CE
               </h3>
             </div>
             <div className="lg:col-span-5">
               <p className="text-[15px] text-charcoal-400 leading-[1.6]">
-                Select any epoch below to inspect the royal decrees, military defenses, and
-                monumental constructions that shaped Sivasagar.
+                Select any epoch below to inspect the verified royal decrees, architectural works,
+                and historical chronicles that shaped Sivasagar.
               </p>
             </div>
           </div>
 
-          {/* 10 Epoch Selector Buttons */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+          {/* 11 Epoch Selector Buttons */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2.5">
             {AHOM_TIMELINE.map((item, index) => {
               const isSelected = selectedMilestone === index;
               return (
                 <button
-                  key={index}
+                  key={item.id}
                   onClick={() => setSelectedMilestone(index)}
-                  className={`m-btn p-3.5 rounded-lg border text-left ${
+                  className={`m-btn p-3.5 rounded-lg border text-left transition-all ${
                     isSelected
-                      ? 'bg-gold-500 text-forest-950 border-gold-400 font-medium'
+                      ? 'bg-gold-500 text-forest-950 border-gold-400 font-medium shadow-md'
                       : 'bg-forest-900/50 border-gold-500/20 text-ivory-100 hover:border-gold-500/50'
                   }`}
                 >
                   <span className="block text-[13px] font-semibold">{item.year}</span>
                   <span
-                    className={`block text-[13px] truncate mt-0.5 ${
-                      isSelected ? 'text-forest-900' : 'text-charcoal-400'
+                    className={`block text-[12px] truncate mt-0.5 ${
+                      isSelected ? 'text-forest-950 font-medium' : 'text-charcoal-400'
                     }`}
                   >
                     {item.title}
@@ -249,17 +249,39 @@ export const HeritageSection: React.FC = () => {
           </div>
 
           {/* Selected Epoch Split Showcase */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-forest-900/45 rounded-xl p-6 sm:p-8 border border-gold-500/25">
-            {/* Left (Cols 1-5): Clean 4:3 Photograph without Text Overlay */}
-            <div className="lg:col-span-5 aspect-[4/3] rounded-lg overflow-hidden bg-forest-950 border border-gold-500/20">
-              <SmartImage
-                src={activeEpoch.image}
-                alt={activeEpoch.title}
-                className="w-full h-full object-cover object-center"
-                fallbackTitle={activeEpoch.title}
-                fallbackCategory="Ahom Era"
-              />
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-forest-900/45 rounded-xl p-6 sm:p-8 border border-gold-500/25">
+            {/* Left (Cols 1-5): Image with Caption and Type Badge */}
+            <figure className="lg:col-span-5 space-y-3">
+              <div className="aspect-[4/3] rounded-lg overflow-hidden bg-forest-950 border border-gold-500/20 shadow-md">
+                <SmartImage
+                  src={activeEpoch.image}
+                  alt={activeEpoch.imageAlt}
+                  className={`w-full h-full ${
+                    activeEpoch.id === 'sukaphaa-charaideo-1253'
+                      ? 'object-contain object-center'
+                      : 'object-cover object-center'
+                  } transition-transform duration-500 hover:scale-[1.02]`}
+                  fallbackTitle={activeEpoch.title}
+                  fallbackCategory="Ahom Era"
+                />
+              </div>
+
+              <figcaption className="space-y-1.5 px-0.5">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-sans font-semibold uppercase tracking-wider bg-forest-800 text-gold-400 border border-gold-500/30">
+                    {activeEpoch.imageType}
+                  </span>
+                  {activeEpoch.imageCredit && (
+                    <span className="text-[11px] text-charcoal-400">
+                      {activeEpoch.imageCredit}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[12px] text-ivory-200/90 leading-relaxed font-sans">
+                  {activeEpoch.imageCaption}
+                </p>
+              </figcaption>
+            </figure>
 
             {/* Right (Cols 6-12): Historical Record */}
             <div className="lg:col-span-7 space-y-4">
@@ -287,6 +309,11 @@ export const HeritageSection: React.FC = () => {
                 <p className="font-serif italic text-lg text-ivory-100">
                   &ldquo;{activeEpoch.significance}&rdquo;
                 </p>
+              </div>
+
+              <div className="pt-3 border-t border-gold-500/15 flex flex-wrap items-baseline gap-2 text-[11px] text-charcoal-400">
+                <span className="font-medium text-gold-400/90">Verified Historical References:</span>
+                <span>{activeEpoch.sourceReferences.join(' · ')}</span>
               </div>
             </div>
           </div>

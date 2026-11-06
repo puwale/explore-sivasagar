@@ -1,3 +1,15 @@
+import sukaphaaPortraitImg from '../assets/images/timeline/chaolung-sukaphaa-portrait.jpg';
+import charaideoMoidamsImg from '../assets/images/timeline/01-charaideo-moidams.jpg';
+import buranjiManuscriptImg from '../assets/images/timeline/02-tai-ahom-buranji-manuscript.jpg';
+import gargaonKarengGharImg from '../assets/images/timeline/03-gargaon-kareng-ghar.jpg';
+import saraighatArtworkImg from '../assets/images/timeline/04-battle-of-saraighat-artwork.jpg';
+import joymotiMemorialImg from '../assets/images/timeline/05-joymoti-jerenga-memorial.jpg';
+import namdangBridgeImg from '../assets/images/timeline/06-namdang-stone-bridge.jpg';
+import sivadolImg from '../assets/images/timeline/07-sivadol-sivasagar.jpg';
+import rangGharImg from '../assets/images/timeline/08-rang-ghar-pavilion.jpg';
+import gaurisagarImg from '../assets/images/timeline/09-gaurisagar-tank-temple.jpg';
+import jorhatMapImg from '../assets/images/timeline/10-jorhat-historical-map.jpg';
+
 export interface AssociatedEvent {
   year: string;
   event: string;
@@ -110,7 +122,10 @@ export const DESTINATIONS: Destination[] = [
     heroImage: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
     gallery: [
       import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Rang_Ghar_2.jpg/1280px-Rang_Ghar_2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/rang-ghar-arch-1.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/rang-ghar-arch-2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/rang-ghar-arch-3.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/rang-ghar-arch-4.jpg',
     ],
     imageCaption: 'The two-storeyed brick pavilion of Rang Ghar at Rupahi Pathar, showing its inverted royal longboat roof profile.',
     shortDescription:
@@ -243,7 +258,10 @@ export const DESTINATIONS: Destination[] = [
     heroImage: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
     gallery: [
       import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/A_walkway_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg/1280px-A_walkway_in_Talatal_Ghar%2C_Sivasagar%2C_Assam.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/talatal-arch-1.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/talatal-arch-2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/talatal-arch-3.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/talatal-arch-4.jpg',
     ],
     imageCaption: 'The arched brick colonnades and open upper terraces of Talatal Ghar at Rangpur, Sivasagar.',
     shortDescription:
@@ -373,7 +391,10 @@ export const DESTINATIONS: Destination[] = [
     heroImage: import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
     gallery: [
       import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Kareng_Ghar%2C_Sivasagar%2C_Assam.jpg/1280px-Kareng_Ghar%2C_Sivasagar%2C_Assam.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/kareng-arch-1.png',
+      import.meta.env.BASE_URL + 'images/destinations/kareng-arch-2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/kareng-arch-3.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/kareng-colonnade.jpg',
     ],
     imageCaption: 'The receding step-pyramidal brick tiers of Kareng Ghar at the historic capital of Garhgaon.',
     shortDescription:
@@ -502,7 +523,10 @@ export const DESTINATIONS: Destination[] = [
     heroImage: import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
     gallery: [
       import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sivadol_Sivasagar.JPG/1280px-Sivadol_Sivasagar.JPG',
+      import.meta.env.BASE_URL + 'images/destinations/sivadol-arch-1.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/sivadol-arch-2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/sivadol-arch-3.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/sivadol-arch-4.jpg',
     ],
     imageCaption: 'Sivadol rising 104 feet above the southern bank of Borpukhuri, crowned by its gilded Kalasha.',
     shortDescription:
@@ -623,10 +647,10 @@ export const DESTINATIONS: Destination[] = [
     location: 'Joysagar, 5 km south-west of Sivasagar Town',
     distanceFromTown: '5 km south-west of Sivasagar town center',
     coordinates: [26.9534, 94.6346],
-    heroImage: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
+    heroImage: import.meta.env.BASE_URL + 'images/destinations/joysagar-tank-joydol.jpg',
     gallery: [
+      import.meta.env.BASE_URL + 'images/destinations/joysagar-tank-joydol.jpg',
       import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Joysagar_Joydol_Relic.jpg/1280px-Joysagar_Joydol_Relic.jpg',
     ],
     imageCaption: 'Joydol (Kesavanarayan Temple) overlooking the vast 318-acre expanse of Joysagar Tank.',
     shortDescription:
@@ -749,7 +773,10 @@ export const DESTINATIONS: Destination[] = [
     heroImage: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
     gallery: [
       import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Maidams_%28N-AS-24%29.jpg/1280px-Maidams_%28N-AS-24%29.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/charaideo-arch-1.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/charaideo-arch-2.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/charaideo-arch-3.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/charaideo-arch-4.jpg',
     ],
     imageCaption: 'The hemispherical earthen royal burial tumuli (Moidams) nestled at the foothills of the Patkai range at Charaideo.',
     shortDescription:
@@ -881,7 +908,11 @@ export const DESTINATIONS: Destination[] = [
     distanceFromTown: '8 km west of Sivasagar town center',
     coordinates: [26.9587, 94.5772],
     heroImage: import.meta.env.BASE_URL + 'images/destinations/namdang.jpg',
-    gallery: [import.meta.env.BASE_URL + 'images/destinations/namdang.jpg'],
+    gallery: [
+      import.meta.env.BASE_URL + 'images/destinations/namdang.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/namdang-arch-1.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/namdang-arch-2.jpg',
+    ],
     imageCaption: 'The 1703 CE monolithic sandstone bridge spanning the Namdang River in Sivasagar district.',
     shortDescription:
       'Chiseled primarily from a single massive sandstone formation in 1703 CE, this 60-meter-long slightly humped stone bridge has carried traffic across the Namdang River for over three centuries.',
@@ -996,7 +1027,10 @@ export const DESTINATIONS: Destination[] = [
     distanceFromTown: '12 km west of Sivasagar town center',
     coordinates: [26.9242, 94.5422],
     heroImage: import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg',
-    gallery: [import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg'],
+    gallery: [
+      import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/gaurisagar-arch-1.jpg',
+    ],
     imageCaption: 'The 18th-century temple spires reflected in the tranquil waters of the 150-acre Gaurisagar Tank.',
     shortDescription:
       'A 150-acre royal reservoir flanked on its northern embankment by three monumental 18th-century temples—Devidol, Shivadol, and Vishnudol—commissioned by Bar Raja Queen Phuleswari.',
@@ -1116,7 +1150,12 @@ export const DESTINATIONS: Destination[] = [
     distanceFromTown: '0.5 km (Within central Sivasagar town)',
     coordinates: [26.9839, 94.6328],
     heroImage: import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg',
-    gallery: [import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg'],
+    gallery: [
+      import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/tai-museum-royal-court.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/tai-museum-gallery.jpg',
+      import.meta.env.BASE_URL + 'images/destinations/tai-museum-artifacts.jpg',
+    ],
     imageCaption: 'The Assam Tai Museum on the western embankment of Borpukhuri, Sivasagar.',
     shortDescription:
       'A specialized historical museum on the bank of Borpukhuri preserving rare Sanchi-bark Buranji manuscripts, royal Hengdang swords, Muga silk court attire, and Tai-Ahom archaeological relics.',
@@ -1421,114 +1460,262 @@ export const AHOM_HISTORY_CHAPTERS: AhomHistoryChapter[] = [
 ];
 
 export interface AhomHeritageMilestone {
+  id: string;
   year: string;
   title: string;
   swargadeo: string;
   description: string;
   significance: string;
   image: string;
+  imageCaption: string;
+  imageType: 'Photograph (Present Day)' | 'Historical Manuscript' | 'Historical Artwork / Reconstruction' | 'Historical Map';
+  imageAlt: string;
+  imageCredit: string;
+  sourceReferences: string[];
 }
 
 export const AHOM_TIMELINE: AhomHeritageMilestone[] = [
   {
-    year: '1228–1253 CE',
-    title: 'Arrival of Sukaphaa & Foundation of Charaideo',
-    swargadeo: 'Chaolung Sukaphaa',
+    id: 'sukaphaa-charaideo-1253',
+    year: '1228 / 1253 CE',
+    title: 'Arrival of Sukaphaa (1228 CE) & Founding of Charaideo Capital (1253 CE)',
+    swargadeo: 'Chaolung Sukaphaa (1228–1268 CE)',
     description:
-      'Crossing the Patkai mountains from Mong Mao, Prince Sukaphaa enters the Brahmaputra Valley in 1228 CE and establishes the first permanent capital of the Ahom kingdom at Charaideo (Che-Tam-Doi) in 1253 CE.',
+      'Crossing the Patkai mountains from Mong Mao, Prince Sukaphaa entered the Upper Brahmaputra Valley in 1228 CE. After strategic transitional encampments at Khamjang, Namrup, Tipam, and Habung, he founded the first permanent royal capital and sacred ancestral seat of the Ahom dynasty at Charaideo (Che-Tam-Doi, "City on the Sacred Hill") in 1253 CE.',
     significance:
-      'Marks the beginning of nearly 600 years of continuous Ahom sovereignty and the sacred royal burial tradition at Charaideo.',
-    image: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
+      'Instituted nearly six centuries of continuous Tai-Ahom sovereignty and consecrated the royal mound-burial tradition (Moidams) on the sacred hillocks of Charaideo.',
+    image: sukaphaaPortraitImg,
+    imageCaption:
+      'Statue portrait of Chaolung Sukaphaa, the founding king of the Ahom dynasty who established the royal seat at Charaideo in 1253 CE.',
+    imageType: 'Historical Artwork / Reconstruction',
+    imageAlt:
+      'Sculptural portrait of Chaolung Sukaphaa seated upon the golden royal throne in ceremonial Ahom court attire.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / Directorate of Cultural Affairs, Assam',
+    sourceReferences: [
+      'Deodhai Asam Buranji',
+      'Edward Gait, A History of Assam (1906)',
+      'ASI Guwahati Circle, Monograph on Charaideo',
+    ],
   },
   {
+    id: 'suhungmung-buranji-1497',
     year: '1497–1539 CE',
-    title: 'Expansion of the Realm & First Assamese Buranjis',
-    swargadeo: 'Swargadeo Suhungmung (Dihingia Raja)',
+    title: 'Expansion of the Realm & Emergence of Assamese Buranji Chronicles',
+    swargadeo: 'Swargadeo Suhungmung (Dihingia Raja, 1497–1539 CE)',
     description:
-      'Swargadeo Suhungmung extends the kingdom across Upper Assam, creates the third great ministerial office (Borpatragohain), adopts the Hindu title Swarganarayan, and commissions the earliest Buranji chronicles in the Assamese language.',
+      'Swargadeo Suhungmung substantially expanded the kingdom across Upper Assam, created the third great ministerial council office (Borpatragohain), adopted the titular epithet Swarganarayan, and inaugurated the official prose historiographical practice of recording state Buranji chronicles in the Assamese language alongside classical Tai-Ahom manuscripts.',
     significance:
-      'Consolidates diverse ethnic communities into a unified state and expands the historiographical tradition.',
-    image: import.meta.env.BASE_URL + 'images/destinations/tai-museum.jpg',
+      'Fostered the Bor-Asom multi-ethnic synthesis and established an empirical archival chronicle tradition written on treated Sanchi-pat (Aquilaria malaccensis) bark with indelible ink.',
+    image: buranjiManuscriptImg,
+    imageCaption:
+      'Historical Sanchi-pat bark manuscript leaf displaying Assamese script chronicle text from the state Buranji archival tradition.',
+    imageType: 'Historical Manuscript',
+    imageAlt:
+      'Ancient Assamese Buranji historical chronicle inscribed on treated Sanchi bark with indelible ink.',
+    imageCredit: 'Department of Historical and Antiquarian Studies (DHAS), Assam / State Archives',
+    sourceReferences: [
+      'H.K. Barpujari, The Comprehensive History of Assam, Vol. II',
+      'S.K. Bhuyan, Studies in the Literature of Assam',
+      'Guwahati University Department of Historical and Antiquarian Studies',
+    ],
   },
   {
+    id: 'garhgaon-capital-1540',
     year: '1540 CE',
-    title: 'Establishment of Imperial Garhgaon Capital',
-    swargadeo: 'Swargadeo Suklengmung (Gargayan Raja)',
+    title: 'Establishment of the Fortified Capital at Garhgaon',
+    swargadeo: 'Swargadeo Suklengmung (Gargayan Raja, 1539–1552 CE)',
     description:
-      'The royal capital is transferred to Garhgaon on the banks of the Dikhow River. The monarch constructs concentric earthen ramparts (Garh), excavates the Garhgaon Tank, and mints the first Ahom coins.',
+      'Swargadeo Suklengmung transferred the primary royal seat to Garhgaon along the Dikhow River in 1540 CE. He constructed extensive concentric earthen defensive ramparts (Garh), excavated the Garhgaon Tank, minted the first octagonal Ahom coinage, and erected an initial royal palace of timber and impermanent materials. The surviving four-storeyed masonry palace (Kareng Ghar) was erected later on this site under Swargadeo Rajeswar Singha in 1752 CE.',
     significance:
-      'Establishes Garhgaon in Sivasagar district as the fortified seat of Ahom emperors for over 150 years.',
-    image: import.meta.env.BASE_URL + 'images/destinations/kareng-ghar.jpg',
+      'Established Garhgaon in Sivasagar district as the fortified administrative capital and political epicenter of the Ahom empire for more than 150 years.',
+    image: gargaonKarengGharImg,
+    imageCaption:
+      'Present-day photograph of the surviving four-storeyed masonry palace of Kareng Ghar at Garhgaon, built in 1752 CE under Swargadeo Rajeswar Singha over the original 1540 CE capital enclosure (ASI Guwahati Circle).',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Present-day view of the four-tiered brick edifice of Kareng Ghar at Garhgaon, Sivasagar.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / ASI Protected Monument',
+    sourceReferences: [
+      'ASI Guwahati Circle, Protected Monuments: Garhgaon Palace (2007–08 excavations)',
+      'Ahom Buranji (tr. G.C. Barua)',
+      'E.A. Gait, A History of Assam',
+    ],
   },
   {
-    year: '1662–1671 CE',
-    title: 'Mughal Expedition to Garhgaon & Battle of Saraighat',
-    swargadeo: 'Swargadeo Chakradhwaj Singha, Udayaditya Singha & Lachit Borphukan',
+    id: 'saraighat-victory-1671',
+    year: '1671 CE',
+    title: 'The Battle of Saraighat & Naval Triumph over the Mughals',
+    swargadeo: 'Swargadeo Chakradhwaj Singha, Udayaditya Singha & Borphukan Lachit',
     description:
-      'After Mir Jumla’s brief occupation of Garhgaon in 1662 CE, the Ahom forces reorganize under Swargadeo Chakradhwaj Singha and Commander-in-Chief Lachit Borphukan, culminating in the decisive naval victory over the Mughal fleet at Saraighat in 1671 CE.',
+      'Following Mir Jumla’s brief invasion and temporary occupation of Garhgaon in 1662–1663 CE, the Ahom administration reorganized its military defenses under Swargadeo Chakradhwaj Singha. Under Commander-in-Chief Lachit Borphukan, Ahom forces mounted a disciplined counter-offensive, culminating in the decisive naval Battle of Saraighat on the Brahmaputra River in 1671 CE, where agile Ahom war boats outmanoeuvred and routed the imperial Mughal armada under Raja Ram Singh I.',
     significance:
-      'Preserves the political independence of Assam and prevents Mughal annexation of the Brahmaputra Valley.',
-    image: import.meta.env.BASE_URL + 'images/destinations/talatal-ghar.jpg',
+      'Decisively halted the eastern imperial advance of the Mughal Empire and permanently safeguarded the sovereign independence of Assam and the Brahmaputra Valley.',
+    image: saraighatArtworkImg,
+    imageCaption:
+      'Artistic reconstruction depicting General Lachit Borphukan directing Ahom naval war vessels on the Brahmaputra River during the Battle of Saraighat in 1671 CE.',
+    imageType: 'Historical Artwork / Reconstruction',
+    imageAlt:
+      'Historical artwork portraying the naval battle of Saraighat (1671) with General Lachit Borphukan commanding Ahom war boats.',
+    imageCredit: 'Historical Artwork / Assam State Museum Collection',
+    sourceReferences: [
+      'S.K. Bhuyan, Lachit Barphukan and His Times (1947)',
+      'E.A. Gait, A History of Assam',
+      'Tungkhungia Buranji',
+    ],
   },
   {
-    year: '1680–1681 CE',
-    title: 'Sacrifice of Sati Joymoti & Accession of Gadadhar Singha',
-    swargadeo: 'Swargadeo Gadadhar Singha (Supatphaa) & Sati Joymoti',
+    id: 'joymoti-martyrdom-1680',
+    year: '1680 CE',
+    title: 'Martyrdom of Sati Joymoti at Jerenga Pathar',
+    swargadeo: 'Reign of Sulikphaa (Lora Roja); Prince Gadapani (later Gadadhar Singha)',
     description:
-      'Princess Joymoti endures martyrdom at Jerenga Pathar to protect her exiled husband Gadapani. In 1681 CE, Gadapani ascends the throne as Swargadeo Gadadhar Singha, restoring stability and initiating the Tungkhungia royal line.',
+      'During the internal crisis engineered by prime minister Laluksola Borphukan and the puppet monarch Sulikphaa (Lora Roja), royal princes were systematically tracked and mutilated. Princess Joymoti Konwari steadfastly refused to reveal the mountain sanctuary of her exiled husband, Prince Gadapani. Enduring fourteen continuous days of brutal physical torture at Jerenga Pathar, she sacrificed her life on March 27, 1680 CE (13 Chaitra 1601 Saka). Her husband Gadapani subsequently ascended the throne in 1681 CE as Swargadeo Gadadhar Singha, founding the illustrious Tungkhungia dynasty.',
     significance:
-      'Ushers in the era of internal peace and prosperity that made Sivasagar’s monumental architecture possible.',
-    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
+      'Her supreme sacrifice ended dynastic turmoil and brought the accession of Gadadhar Singha, inaugurating the golden architectural era of the Tungkhungia monarchs in Sivasagar.',
+    image: joymotiMemorialImg,
+    imageCaption:
+      'Present-day photograph of the commemorative Sati Joymoti memorial stone at Jerenga Pathar in Sivasagar, marking the site of her martyrdom on March 27, 1680 CE.',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Commemorative stone pillar and memorial erected at Jerenga Pathar honoring the supreme sacrifice of Sati Joymoti.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / State Memorial Enclosure',
+    sourceReferences: [
+      'Tungkhungia Buranji (ed. S.K. Bhuyan)',
+      'S.L. Baruah, Last Days of the Ahom Monarchy',
+      'Assam State Protected Memorial Records',
+    ],
   },
   {
-    year: '1697–1703 CE',
-    title: 'Foundation of Rangpur, Joysagar & Namdang Bridge',
-    swargadeo: 'Swargadeo Rudra Singha (Sukhrungphaa)',
+    id: 'namdang-bridge-1703',
+    year: '1703 CE',
+    title: 'Construction of the Monolithic Namdang Stone Bridge',
+    swargadeo: 'Swargadeo Rudra Singha (Sukhrungphaa, 1696–1714 CE)',
     description:
-      'Swargadeo Rudra Singha excavates the 318-acre Joysagar Tank (1697 CE) at Jerenga Pathar, builds the Joydol temple (1698 CE), founds the new capital city of Rangpur, and constructs the monolithic Namdang Stone Bridge (1703 CE).',
+      'Swargadeo Rudra Singha commissioned master artisan Ghanashyam in 1703 CE to construct the Namdang Stone Bridge (Namdang Sila Saku) across the Namdang River. Hewn entirely from a single massive solid sandstone rock outcrop brought from the Naga foothills, the bridge was engineered with three arches without iron joints, bonded with indigenous Karpatia Churna (sticky Bora rice, duck eggs, black pulses, and snail-shell lime). It remains in active operation today carrying National Highway traffic.',
     significance:
-      'Transforms Rangpur (modern Sivasagar) into the cultural and architectural metropolis of Northeast India.',
-    image: import.meta.env.BASE_URL + 'images/destinations/namdang.jpg',
+      'A triumph of medieval Ahom civil engineering and stone masonry, serving continuously for over 320 years as an unbroken, operational transportation artery into Sivasagar.',
+    image: namdangBridgeImg,
+    imageCaption:
+      'Present-day photograph of the monolithic Namdang Stone Bridge, hewn from solid sandstone in 1703 CE under Swargadeo Rudra Singha and still carrying highway traffic.',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Monolithic solid-carved stone arch bridge of Namdang built in 1703 CE crossing the Namdang River near Sivasagar.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / State Protected Monument',
+    sourceReferences: [
+      'E.A. Gait, A History of Assam (1906)',
+      'Directorate of Archaeology, Government of Assam',
+      'Tungkhungia Buranji',
+    ],
   },
   {
-    year: '1723–1734 CE',
-    title: 'Era of the Bar Raja Queens: Gaurisagar & Sivasagar Sivadol',
-    swargadeo: 'Swargadeo Siba Singha, Bar Raja Phuleswari & Bar Raja Ambika',
+    id: 'gaurisagar-phuleswari-1723',
+    year: '1723–1724 CE',
+    title: 'Excavation of Gaurisagar Tank & Temples by Bar Raja Phuleswari',
+    swargadeo: 'Swargadeo Siba Singha & Bar Raja Queen Phuleswari Devi',
     description:
-      'Crowned successively as sovereign Bar Rajas, Queen Phuleswari commissions the 150-acre Gaurisagar Tank and temples (1723–1724 CE), while her sister Queen Ambika excavates the 129-acre Borpukhuri and constructs the 104-foot Sivadol (1733–1734 CE).',
+      'Swargadeo Siba Singha, advised by court astrologers regarding the ominous Chatra-bhanga yoga (loss of royal umbrella), conferred supreme sovereign authority upon his chief consort, Queen Phuleswari, who governed with the royal title Bar Raja ("Chief King"). Between 1723 and 1724 CE, Bar Raja Phuleswari excavated the vast 150-acre Gaurisagar Tank and constructed three elegant brick-and-stone temples (Sivadol, Devidol, and Vishnudol) on its northern embankment.',
     significance:
-      'Gives Sivasagar town its modern name and skyline while marking a unique era of female royal patronage.',
-    image: import.meta.env.BASE_URL + 'images/destinations/sivadol.JPG',
+      'Exemplified a pioneering chapter of female sovereign rule in medieval South Asia, leaving monumental public hydraulic engineering and temple sanctuaries in Sivasagar district.',
+    image: gaurisagarImg,
+    imageCaption:
+      'Present-day photograph of the Gaurisagar Devidol temple and the 150-acre Gaurisagar Tank, consecrated by Bar Raja Queen Phuleswari in 1723–1724 CE (ASI Guwahati Circle).',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Present-day view of the historic Gaurisagar temple spire and expansive water reservoir in Sivasagar district.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / ASI Protected Monument',
+    sourceReferences: [
+      'ASI Guwahati Circle, Centrally Protected Monuments: Gaurisagar Tank, Sivadol and Devidol',
+      'Tungkhungia Buranji',
+      'Edward Gait, A History of Assam',
+    ],
   },
   {
-    year: '1744–1769 CE',
-    title: 'Brick Reconstruction of Rang Ghar, Kareng Ghar & Talatal Ghar',
-    swargadeo: 'Swargadeo Pramatta Singha & Swargadeo Rajeswar Singha',
+    id: 'sivadol-ambika-1734',
+    year: '1734 CE',
+    title: 'Consecration of Sivasagar Sivadol & Borpukhuri by Bar Raja Ambika',
+    swargadeo: 'Swargadeo Siba Singha & Bar Raja Queen Ambika Devi',
     description:
-      'Swargadeo Pramatta Singha constructs the two-storeyed brick Rang Ghar amphitheatre (1744–1750 CE), followed by Swargadeo Rajeswar Singha’s monumental brick reconstructions of Kareng Ghar at Garhgaon (1752 CE) and the seven-tiered Talatal Ghar at Rangpur (1751–1769 CE).',
+      'Following Queen Phuleswari’s demise, her sister Queen Ambika was crowned as sovereign Bar Raja. In 1734 CE (Saka 1656), Bar Raja Ambika consecrated the soaring 104-foot Sivasagar Sivadol on the southern bank of the newly excavated 129-acre Borpukhuri (Sivasagar Tank). Crowned by an 8-foot pure gold mastaka finial (Kalasha) and flanked by Vishnudol and Devidol, this Nilachala-rekha sanctuary became the spiritual focal point of the kingdom.',
     significance:
-      'Represents the zenith of Ahom secular brick masonry and indigenous Karpatia Churna engineering.',
-    image: import.meta.env.BASE_URL + 'images/destinations/rang-ghar.jpg',
+      'Endowed Sivasagar town with its enduring geographic identity, sacred skyline, and the tallest pre-modern temple tower in Northeast India.',
+    image: sivadolImg,
+    imageCaption:
+      'Present-day photograph of the 104-foot Sivasagar Sivadol temple with its golden finial, consecrated in 1734 CE by Bar Raja Queen Ambika on Borpukhuri (ASI Guwahati Circle).',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      '104-foot towering fluted sikhara of Sivasagar Sivadol temple with its golden finial overlooking the Borpukhuri reservoir.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / ASI Protected Monument',
+    sourceReferences: [
+      'ASI Guwahati Circle, Centrally Protected Monuments: Sibdol, Sivasagar',
+      'Assam District Gazetteers: Sibsagar District',
+      'Edward Gait, A History of Assam',
+    ],
   },
   {
-    year: '1794–1826 CE',
-    title: 'Capital Shift to Jorhat & the Treaty of Yandabo',
-    swargadeo: 'Swargadeo Gaurinath Singha & Later Monarchs',
+    id: 'rang-ghar-pramatta-1744',
+    year: '1744–1746 CE',
+    title: 'Construction of the Brick Royal Amphitheatre at Rang Ghar',
+    swargadeo: 'Swargadeo Pramatta Singha (Sunenphaa, 1744–1751 CE)',
     description:
-      'Following the Moamoria uprisings, the royal capital is moved from Rangpur to Jorhat in 1794 CE. Subsequent Burmese invasions lead to British intervention and the Treaty of Yandabo in February 1826.',
+      'Replacing an earlier timber-and-bamboo royal pavilion built by his father Rudra Singha, Swargadeo Pramatta Singha commissioned the permanent two-storeyed red-brick Rang Ghar pavilion between 1744 and 1746 CE at Rupahi Pathar in Rangpur. Featuring cusped masonry arches and a distinctive parabolic inverted longboat roofline inspired by Tai boat forms, it served as the royal sports viewing pavilion for athletic bouts, buffalo fights, and Rongali Bihu celebrations.',
     significance:
-      'Concludes the 598-year sovereign rule of the Ahom dynasty, leaving Sivasagar’s monuments as enduring historical witnesses.',
-    image: import.meta.env.BASE_URL + 'images/destinations/gaurisagar.jpg',
+      'Celebrated as Asia’s earliest surviving sports amphitheatre and an architectural symbol of Ahom engineering ingenuity and Assamese cultural heritage.',
+    image: rangGharImg,
+    imageCaption:
+      'Present-day photograph of the double-storied Rang Ghar sports amphitheatre at Rupahi Pathar, constructed in brick between 1744 and 1746 CE under Swargadeo Pramatta Singha (ASI Protected Monument N-AS-42).',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Red-brick facade and parabolic inverted boat-shaped roof of the Rang Ghar royal amphitheatre in Sivasagar.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / ASI Protected Monument (N-AS-42)',
+    sourceReferences: [
+      'ASI Guwahati Circle, Protected Monuments: Ranghar Pavilion (N-AS-42)',
+      'Tungkhungia Buranji (ed. S.K. Bhuyan)',
+      'E.A. Gait, A History of Assam',
+    ],
   },
   {
-    year: 'July 2024 CE',
+    id: 'jorhat-shift-1794',
+    year: '1794 CE',
+    title: 'Relocation of the Ahom Royal Capital to Jorhat',
+    swargadeo: 'Swargadeo Gaurinath Singha (Suhitpangphaa, 1780–1795 CE)',
+    description:
+      'Following the devastating Moamoria uprisings and civil disturbances that severely compromised Rangpur and Garhgaon, Swargadeo Gaurinath Singha formally shifted the royal administrative seat westward to Jorhat along the Bhogdoi River in 1794 CE. Jorhat functioned as the final capital of the Ahom kingdom through subsequent Burmese conflicts until British annexation under the Treaty of Yandabo in February 1826.',
+    significance:
+      'Concluded the 96-year reign of Rangpur (Sivasagar) as the imperial capital, establishing Jorhat as the final administrative seat of the six-century Ahom monarchy.',
+    image: jorhatMapImg,
+    imageCaption:
+      'Historical archival survey map documenting the river channels, geography, and administrative perimeter of the final Ahom capital at Jorhat, established in 1794 CE.',
+    imageType: 'Historical Map',
+    imageAlt:
+      'Historical archival map depicting the geography, rivers, and layout of the late Ahom administrative capital at Jorhat.',
+    imageCredit: 'Archival Survey Records / British Library & Assam State Archives',
+    sourceReferences: [
+      'S.L. Baruah, Last Days of the Ahom Monarchy (1769–1826)',
+      'E.A. Gait, A History of Assam',
+      'Alexander Mackenzie, North-East Frontier of Bengal',
+    ],
+  },
+  {
+    id: 'unesco-charaideo-2024',
+    year: '26 July 2024 CE',
     title: 'UNESCO World Heritage Inscription of Charaideo Moidams',
-    swargadeo: 'Enduring Legacy of the Ahom Civilization',
+    swargadeo: 'Universal Recognition of Ahom Funerary Architecture',
     description:
-      'At the 46th World Heritage Committee session, UNESCO inscribes "Moidams – the Mound-Burial System of the Ahom Dynasty" at Charaideo onto the World Heritage List under cultural criteria (iii) and (iv).',
+      'On 26 July 2024, at its 46th session in New Delhi, the UNESCO World Heritage Committee officially inscribed "Moidams – the Mound-Burial System of the Ahom Dynasty" at Charaideo onto the UNESCO World Heritage List under cultural criteria (iii) and (iv). The site preserves the unique subterranean vaulted brick chambers and sacred earthen tumuli of Tai-Ahom Swargadeos and queens.',
     significance:
-      'Secures global recognition for the royal funerary architecture and historical heritage of Sivasagar and Charaideo.',
-    image: import.meta.env.BASE_URL + 'images/destinations/charaideo.jpg',
+      'Inscribed as India’s 43rd World Heritage property and the first cultural World Heritage site in Northeast India, cementing the global civilizational significance of Ahom funerary architecture.',
+    image: charaideoMoidamsImg,
+    imageCaption:
+      'Present-day photograph of the royal burial mounds (Moidams) at Charaideo, officially inscribed on the UNESCO World Heritage List on 26 July 2024 at the 46th session of the World Heritage Committee.',
+    imageType: 'Photograph (Present Day)',
+    imageAlt:
+      'Panoramic view of the sacred mound-burial earthen pyramids of the Ahom dynasty at the UNESCO World Heritage site in Charaideo.',
+    imageCredit: 'Explore Sivasagar Heritage Archive / UNESCO World Heritage Site',
+    sourceReferences: [
+      'UNESCO World Heritage Centre, Inscription Decision 46 COM 8B.28 (July 2024)',
+      'Archaeological Survey of India (ASI), World Heritage Division',
+      'State Directorate of Archaeology, Assam',
+    ],
   },
 ];
 
@@ -1678,7 +1865,7 @@ export const EXPERIENCES: ExperienceCategory[] = [
     title: 'Traditional Assamese Culinary Heritage',
     subtitle: 'Indigenous Ingredients, Alkaline Khar, Tenga & Bora Saul',
     icon: 'UtensilsCrossed',
-    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/joysagar-tank-joydol.jpg',
     description:
       'Rooted in the fertile floodplains of the Brahmaputra Valley, traditional Upper Assamese and Tai-Ahom food culture emphasizes seasonal herbs, fermented bamboo shoots (Khorisa), slow-simmered gravies, and heirloom rice varieties.',
     highlights: [
@@ -1943,7 +2130,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     title: 'Joysagar Tank & Joydol (Kesavanarayan Temple)',
     location: 'Joysagar, Jerenga Pathar, Sivasagar',
     category: 'Ancient Lakes',
-    image: import.meta.env.BASE_URL + 'images/destinations/joysagar.jpg',
+    image: import.meta.env.BASE_URL + 'images/destinations/joysagar-tank-joydol.jpg',
     era: '1697–1698 CE (Swargadeo Rudra Singha)',
     caption:
       'The 1698 CE Joydol temple overlooking the 318-acre Joysagar Tank, excavated in memory of Sati Joymoti.',

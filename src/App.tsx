@@ -2,6 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { DESTINATIONS } from './data/sivasagarData';
 import type { Destination } from './data/sivasagarData';
 import { Hero } from './components/Hero';
+import { AssameseDivider } from './components/AssameseDivider';
 import { ExploreDestinations } from './components/ExploreDestinations';
 import { HeritageSection } from './components/HeritageSection';
 import { HistoricalDiscoveriesSection } from './components/HistoricalDiscoveriesSection';
@@ -13,13 +14,11 @@ import { CinematicFooter } from '@/components/ui/motion-footer';
 import { FloatingDock, type FloatingDockItem } from '@/components/ui/floating-dock';
 import { Bookmark, Compass, Home, Landmark, Scroll, Map, Image as ImageIcon } from 'lucide-react';
 
+import { DestinationDetailModal } from './components/DestinationDetailModal';
+
 // Lazy-loaded heavy modules for optimal initial load performance
 const InteractiveMap = lazy(() =>
   import('./components/InteractiveMap').then((m) => ({ default: m.InteractiveMap }))
-);
-
-const DestinationDetailModal = lazy(() =>
-  import('./components/DestinationDetailModal').then((m) => ({ default: m.DestinationDetailModal }))
 );
 
 function MapFallback() {
@@ -59,7 +58,15 @@ function MapFallback() {
 }
 
 export function App() {
-  const [selectedDestination, setSelectedDestination] = useState<Destination | null>(null);
+  const [selectedDestination, setSelectedDestination] = useState<Destination | null>(() => {
+    if (typeof window !== 'undefined') {
+      const modalParam = new URLSearchParams(window.location.search).get('modal');
+      if (modalParam) {
+        return DESTINATIONS.find((d) => d.id === modalParam) || null;
+      }
+    }
+    return null;
+  });
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [savedIds, setSavedIds] = useState<string[]>(() => {
     try {
@@ -77,6 +84,16 @@ export function App() {
       console.error(e);
     }
   }, [savedIds]);
+
+  useEffect(() => {
+    const scrollParam = new URLSearchParams(window.location.search).get('scroll');
+    if (scrollParam) {
+      const timer = setTimeout(() => {
+        window.scrollTo({ top: Number(scrollParam), behavior: 'instant' });
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleToggleSave = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -161,6 +178,9 @@ export function App() {
           onExploreDestinations={() => handleNavigate('destinations')}
           onDiscoverHeritage={() => handleNavigate('heritage')}
         />
+
+        {/* Traditional Assamese Cultural Divider */}
+        <AssameseDivider />
 
         {/* Dedicated Sivasagar Heritage Collection */}
         <ExploreDestinations

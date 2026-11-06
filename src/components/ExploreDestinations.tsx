@@ -1,7 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import type { Destination } from '../data/sivasagarData';
-import { Search, MapPin, ArrowRight, Bookmark, Filter } from 'lucide-react';
+import { MapPin, ArrowRight, Bookmark, Filter } from 'lucide-react';
 import { SmartImage } from './SmartImage';
+import ahomSymbolWatermark from '../assets/images/ahom-symbol-watermark.png';
+import { OrbInput } from './ui/animated-input';
 
 interface ExploreDestinationsProps {
   destinations: Destination[];
@@ -18,6 +20,16 @@ export const ExploreDestinations: React.FC<ExploreDestinationsProps> = ({
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  // Auto-scroll when targeted directly
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash === '#destinations') {
+      const el = document.getElementById('destinations');
+      if (el) {
+        el.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
+  }, []);
 
   const categories = [
     'All',
@@ -49,9 +61,22 @@ export const ExploreDestinations: React.FC<ExploreDestinationsProps> = ({
   return (
     <section
       id="destinations"
-      className="py-24 sm:py-32 bg-ivory-100 text-charcoal-800 border-b border-charcoal-800/10"
+      className="relative overflow-hidden py-24 sm:py-32 bg-ivory-100 text-charcoal-800 border-b border-charcoal-800/10"
     >
-      <div className="wrap-museum">
+      {/* Full-Section Ahom Symbol Watermark Background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden select-none"
+      >
+        <img
+          src={ahomSymbolWatermark}
+          alt=""
+          className="w-[94vw] sm:w-[90vw] md:w-[1100px] lg:w-[1800px] xl:w-[2200px] 2xl:w-[2500px] max-w-none aspect-square object-contain object-center opacity-[0.25] pointer-events-none select-none transition-opacity duration-300"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="wrap-museum relative z-10">
         {/* 12-Column Museum Header Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-10 border-b border-charcoal-800/15 mb-10">
           <div className="lg:col-span-7 space-y-2">
@@ -101,27 +126,24 @@ export const ExploreDestinations: React.FC<ExploreDestinationsProps> = ({
             />
           </div>
 
-          {/* Search Input */}
-          <div className="relative w-full lg:w-80 shrink-0">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-charcoal-500" aria-hidden="true" />
-            <input
-              type="text"
-              placeholder="Search monument or Swargadeo..."
-              aria-label="Search monument archive by name, Swargadeo, or historical era"
+          {/* Monument Search Box with Rotating Tai-Ahom Emblem */}
+          <div className="relative w-full lg:w-96 shrink-0">
+            <OrbInput
+              size="compact"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-11 pl-10 pr-14 rounded-lg bg-ivory-50 border border-charcoal-800/20 text-charcoal-800 text-[15px] focus:outline-none focus:border-forest-900 transition-colors placeholder:text-charcoal-500"
+              onClear={() => setSearchQuery('')}
+              placeholders={[
+                "Search monument or Swargadeo...",
+                "Search Rang Ghar...",
+                "Search Talatal Ghar...",
+                "Search Kareng Ghar...",
+                "Search Charaideo Maidams...",
+                "Search Sivadol...",
+                "Search Namdang Stone Bridge...",
+              ]}
+              aria-label="Search monument archive by name, Swargadeo, or historical era"
             />
-            {searchQuery && (
-              <button
-                type="button"
-                onClick={() => setSearchQuery('')}
-                aria-label="Clear monument search query"
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[13px] text-charcoal-600 hover:text-forest-950 font-medium"
-              >
-                Clear
-              </button>
-            )}
           </div>
         </div>
 
